@@ -11,13 +11,13 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#e3f2fd;">
             <div class="container-fluid">
-                <a class="nabvar-brand" href="#">端末管理</a>
+                <a class="nabvar-brand" href="{{ url_for('device_list') }}">端末管理</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toogle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navvarNavAltMarkup">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">新規登録</a>
+                        <a class="nav-link" href="{{ url_for('add_device') }}">新規登録</a>
                     </div>
                 </div>
             </div>

@@ -3,39 +3,39 @@
 <div class="container mt-5 mb-5 d-flex justify-content-center">
     <div class="card px-1 py-4" style="width: 400px">
         <div class="card-body">
-            <h6 class="card-title mb-3">新規登録ページ</h6>
-            <form action="/add_device" method="POST">
+            <h6 class="card-title mb-3">データ編集ページ</h6>
+            <form action="{{ url_for('device_update', id=device.id)}}" method="POST">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="デバイス名" />
+                            <input type="text" name="name" class="form-control" value="{{ device.name }}" />
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input type="text" name="type" class="form-control" placeholder="デバイスの種類" />
+                            <input type="text" name="type" class="form-control" value="{{ device.type }}" />
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input type="text" name="model" class="form-control" placeholder="モデル番号" />
+                            <input type="text" name="model" class="form-control" value="{{ device.model }}" />
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input type="date" name="year" class="form-control" placeholder="販売開始年月日" />
+                            <input type="date" name="year" class="form-control" value="{{ device.year }}" />
                         </div>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col text-center">
-                        <button type="submit" class="btn btn-primary">機材追加</button>
+                        <button type="submit" class="btn btn-primary">修正</button>
                     </div>
                 </div>
             </form>
